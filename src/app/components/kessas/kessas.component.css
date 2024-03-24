@@ -1,0 +1,18 @@
+div{
+    width: 200px; /* Spécifiez la largeur souhaitée */
+    height: 200px; /* Spécifiez la hauteur souhaitée */
+}
+
+
+.image-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Autres styles pour la div image-frame */
+    border: 2px solid black;
+  }
+
+  .image-frame p {
+    text-align: center;
+    /* Autres styles pour le paragraphe */
+  }

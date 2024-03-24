@@ -1,0 +1,45 @@
+/* Style pour le titre */
+h1 {
+    color: #ff69b4; /* Rose vif */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Style pour les images */
+img {
+
+    display: block; /* Pour éviter les espaces vides sous les images */
+    margin: 0 auto ; /* Centrer les images horizontalement */
+    width: 1000px;
+    height: 500px;
+    padding-top: 50px;
+
+}
+
+/* Style pour le texte */
+p {
+    color: #070707; /* Bleu */
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    text-align: justify;
+    text-align: right;
+    direction: rtl;
+    margin-right: 100px;
+    font-size: 30px;
+    width: 1000px;
+}
+
+.submit {
+  background-color: #4c74af; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur */
+  border: none; /* Suppression de la bordure */
+  border-radius: 5px; /* Arrondi des coins */
+  cursor: pointer; /* Curseur de la souris */
+  margin-right: 50%;
+}
+
+.submit:hover {
+  background-color: #454ba0; /* Couleur de fond au survol */
+}

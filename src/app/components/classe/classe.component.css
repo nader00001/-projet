@@ -1,0 +1,46 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in;
+    border: 2px solid transparent;
+    border-radius: 5px;
+  }
+  
+  /* Animation pour la couleur de la bordure */
+  @keyframes borderAnimation {
+    0% {
+      border-color: red;
+    }
+    25% {
+      border-color: blue;
+    }
+    50% {
+      border-color: green;
+    }
+    75% {
+      border-color: orange;
+    }
+    100% {
+      border-color: red;
+    }
+  }
+  
+  .border-animate {
+    animation: borderAnimation 5s linear infinite;
+  }
+  
+  /* Style pour le texte dans la balise <p> */
+  p {
+    color: blue; /* Couleur du texte */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Gras */
+    text-align: center; /* Centré horizontalement */
+  }
+  

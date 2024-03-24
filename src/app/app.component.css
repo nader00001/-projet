@@ -1,0 +1,119 @@
+/* background.component.css */
+
+.background-image {
+    background-image: url('../assets/back1.jpg');
+    background-size: cover; /* Assurez-vous que l'image de fond couvre toute la zone */
+    background-attachment: fixed; /* L'image de fond reste fixe pendant le défilement */
+    padding: 20px; /* Ajoutez de l'espace autour du contenu */
+    border: 1px solid #ccc; /* Ajoutez une bordure */
+  }
+  
+  .row {
+    overflow-x: auto; /* Permettre le défilement horizontal des éléments en surplus */
+    white-space: nowrap; /* Empêcher le retour à la ligne des éléments */
+    
+  }
+  
+  .col-md-3 {
+    display: inline-block; /* Afficher les éléments en ligne */
+    vertical-align: top; /* Aligner les éléments en haut */
+    margin: 10px;
+    text-align: center;
+    width: calc(33.33% - 20px); /* Calculer la largeur pour avoir 3 colonnes */
+    max-width: 300px; /* Limiter la largeur des colonnes */
+  }
+  
+  h1.text-success {
+    color: green; /* Couleur du texte */
+    font-size: 24px; /* Taille de la police */
+    /* Autres styles CSS si nécessaire */
+    text-align: center;
+  }
+  
+  /* Ajouter des Media Queries pour rendre le CSS plus responsive */
+  @media (max-width: 992px) {
+    .col-md-3 {
+        width: calc(50% - 20px); /* Pour les écrans plus petits, afficher 2 colonnes */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-3 {
+        width: 100%; /* Pour les écrans encore plus petits, afficher une colonne pleine largeur */
+    }
+  }
+  
+  
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row; /* Aligner les éléments verticalement */
+    /* height: 100vh; */
+    /* margin-top: 0; */
+  }
+  
+  .welcome-title {
+    font-size: 24px;
+    color: #4CAF50; /* Vert */
+    text-align: center;
+    font-family: Arial, sans-serif; /* Utiliser la police Arial ou une police sans-sérif générique */
+    margin-bottom: 20px;
+  }
+  
+  app-classe {
+    margin: 20px; /* Marge autour des éléments app-classe */
+    padding: 20px; /* Remplissage à l'intérieur des éléments app-classe */
+    border: 2px solid blue; /* Bordure bleue */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: lightblue; /* Couleur de fond */
+    text-align: center; /* Alignement du texte au centre */
+    width: 200px; /* Largeur fixe */
+   
+  }
+
+
+  /* CSS */
+.title {
+  font-size: 36px;
+  color: #f7f5f4; /* Orange */
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.paragraph {
+  font-size: 20px;
+  color: #fcf8f8; /* Bleu */
+  text-align: justify;
+    direction: rtl; /* Texte justifié à droite */
+    margin: 20px; /* Ajoute une marge de 20px autour des paragraphes */
+    line-height: 1.5; /* Espacement entre les lignes */
+    font-size: larger;
+}
+.centered-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+  
