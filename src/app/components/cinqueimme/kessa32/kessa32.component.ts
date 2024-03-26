@@ -8,12 +8,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./kessa32.component.css'],
 })
 export class Kessa32Component {
-  constructor(
-    private router: Router,
+  audioElement: HTMLAudioElement;
+  isPlaying: boolean;
 
-  ) {}
+  constructor(private router : Router) {
+    this.audioElement = new Audio("assets/vocal/rabi3.mp3");
+    this.isPlaying = false;
+
+  }
+
+  toggleAudio() {
+    if (this.isPlaying) {
+      this.audioElement.pause();
+    } else {
+      this.audioElement.play();
+    }
+    this.isPlaying = !this.isPlaying;
+  }
   routerRabi3() {
     this.router.navigate(['quest33']);
+  }
+
+  playAudio() {
+    const audioElement = document.getElementById('audioElement') as HTMLAudioElement;
+    audioElement.play();
   }
 
 

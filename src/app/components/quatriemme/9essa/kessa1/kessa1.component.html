@@ -1,4 +1,17 @@
+<audio id="audioElement">
+  <source src="assets/vocal/أمي حدثيني عن فلسطين.mp3" type="audio/mpeg">
+
+</audio>
+
+<div class="audio-player-container">
+  <button class="audio-button" (click)="toggleAudio()">
+    {{ isPlaying ? 'وقف' : 'تشغيل' }}
+  </button>
+</div>
+
+
 <div style="text-align: left; margin-left: 20px;">
+ 
     <h1 style="text-decoration: underline;">
         أمي حدثیني عن فلسطین
        </h1 >

@@ -38,3 +38,30 @@ p {
 .submit:hover {
   background-color: #454ba0; /* Couleur de fond au survol */
 }
+
+.audio-player-container {
+  position: fixed;
+
+  transform: translateX(-50%);
+
+}
+
+.audio-button {
+  background-color: #4CAF50; /* Couleur de fond du bouton */
+  border: none;
+  color: white; /* Couleur du texte du bouton */
+  margin-left: 40%;
+  width: 100px;
+  height: 50px;
+  text-decoration: none;
+
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
+
+.submit:hover {
+  background-color: #454ba0; /* Couleur de fond au survol */
+}

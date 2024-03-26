@@ -7,7 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./kessa1.component.css']
 })
 export class Kessa1Component {
-  constructor(private router : Router) {}
+  audioElement: HTMLAudioElement;
+  isPlaying: boolean;
+
+  constructor(private router : Router) {
+    this.audioElement = new Audio("assets/vocal/أمي حدثيني عن فلسطين.mp3");
+    this.isPlaying = false;
+
+  }
+
+  toggleAudio() {
+    if (this.isPlaying) {
+      this.audioElement.pause();
+    } else {
+      this.audioElement.play();
+    }
+    this.isPlaying = !this.isPlaying;
+  }
 routerFelastin() {
   this.router.navigate(["/quest42"]);
 }
