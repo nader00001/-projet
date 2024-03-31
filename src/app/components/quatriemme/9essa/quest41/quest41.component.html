@@ -1,14 +1,16 @@
 <div class="container">
   <h1>أسئلة وأجوبة</h1>
-  <div class="question">
+  <div class="question" >
       <h2>لماذا فرح صابر؟</h2>
-      <p>.............................</p>
+      <input type="text" class="text-input" formControlName="answer1">
   </div>
-  <div class="question">
+  <div class="question" >
       <h2>ماهي بقية أركان الإسلام؟</h2>
-      <p>.............................</p>
+      <input type="text" class="text-input" formControlName="answer2">
   </div>
-  <div class="question">
+  <div class="question" >
       <h2>ماذا قرر صابر في نهاية القصة؟</h2>
-      <p>.............................</p>
+      <input type="text" class="text-input" formControlName="answer3">
   </div>
+  <button class="submit-button" (click)="submitForm()">تحقق</button>
+</div>

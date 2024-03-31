@@ -1,41 +1,43 @@
 .container {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: justify;
-    text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
 }
 
 .question {
   margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-  text-align: justify;
-    text-align: right;
 }
 
 h2 {
-  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-p {
-  color: #666;
-}
-.question-container {
-  text-align: right; /* Aligner le texte à droite */
-}
-
-.radio-container {
-  text-align: right; /* Aligner les éléments radio à droite */
+.text-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.order-list {
-  float: right; /* Flotter les listes d'ordre à droite */
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-p, input, ul {
-  text-align: right; /* Aligner tous les éléments textuels à droite */
+.button:hover {
+  background-color: #45a049;
 }

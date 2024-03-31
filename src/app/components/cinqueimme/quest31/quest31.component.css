@@ -1,38 +1,47 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .question-container {
-    margin-bottom: 20px;
-    text-align: justify;
-    text-align: right;
+  margin-bottom: 20px;
 }
 
 .question {
-    font-size: 18px;
-    color: #009688; /* Couleur verte vive */
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: justify;
-    text-align: right;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .text-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #009688; /* Bordure verte vive */
-    border-radius: 5px;
-    text-align: justify;
-    text-align: right;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .radio-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .radio-label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #009688; /* Couleur verte vive */
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 .radio-input {
-    margin-right: 5px;
+  margin-right: 20px; /* Ajoutez de l'espace entre l'élément de saisie et le texte */
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
 }

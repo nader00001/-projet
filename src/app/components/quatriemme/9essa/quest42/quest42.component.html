@@ -1,56 +1,49 @@
-<div  class="body">
-<div class="container">
-  <h1 class="h1">أسئلة وأجوبة</h1>
-  <div class="question">
-      <h2>ماهي الألوان التي يتكون منها علم فلسطين؟</h2>
-      <form>
-          <input type="radio" id="colors1" name="colors" value="اللون الأخضر و الأبيض و الأسود و الأحمر">
-          <label for="colors1">
-            اللون الأخضر و الأبيض و الأسود و الأحمر
+<div class="body">
+  <div class="container">
+    <h1 class="h1">أسئلة وأجوبة</h1>
 
-          </label><br>
-          <input type="radio" id="colors2" name="colors" value="اللون الأزرق و الأبيض و الأسود و الأحمر">
-          <label for="colors2">
-            اللون الأزرق و الأبيض و الأسود و الأحمر
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+      <div class="question">
+        <h2>ماهي الألوان التي يتكون منها علم فلسطين؟</h2>
+        <div formGroupName="question1">
+          <input type="radio" formControlName="colors1" id="colors1" value="colors1" name="ques">
+          <label for="colors1">اللون الأخضر و الأبيض و الأسود و الأحمر</label><br>
 
+          <input type="radio" formControlName="colors2" id="colors2" value="colors2" name="ques">
+          <label for="colors2">اللون الأزرق و الأبيض و الأسود و الأحمر</label><br>
 
-          </label><br>
-          <input type="radio" id="colors2" name="colors" value="اللون الأزرق و الأبيض و الأسود و الأحمر">
-          <label for="colors2">
-            اللون الأخضر و الأبيض و الأسود و الأحمر
+          <input type="radio" formControlName="colors3" id="colors3" value="colors3" name="ques">
+          <label for="colors3">اللون الأصفر و الأبيض و الأسود و الأحمر</label><br>
+        </div>
+      </div>
 
-          </label><br>
-      </form>
-  </div>
-  <div class="question">
-      <h2>ماذا تسمى أشهر وجبة في فلسطين؟</h2>
-      <form>
-          <input type="radio" id="meal1" name="meal" value="المدلوقة المقلوبة المحمر">
-          <label for="meal1">المدلوقة  </label><br>
-          <input type="radio" id="meal1" name="meal" value="المدلوقة المقلوبة المحمر">
-          <label for="meal1"> المقلوبة </label><br>
-          <input type="radio" id="meal1" name="meal" value="المدلوقة المقلوبة المحمر">
-          <label for="meal1">  المحمر</label><br>
+      <div class="question">
+        <h2>ماذا تسمى أشهر وجبة في فلسطين؟</h2>
+        <div formGroupName="question2">
+          <input type="radio" formControlName="meal1" id="meal1" value="meal1" name="quest2">
+          <label for="meal1">المدلوقة</label><br>
 
+          <input type="radio" formControlName="meal2" id="meal2" value="meal2" name="quest2">
+          <label for="meal2">المقلوبة</label><br>
 
-      </form>
+          <input type="radio" formControlName="meal3" id="meal3" value="meal3" name="quest2">
+          <label for="meal3">المحمر</label><br>
+        </div>
+      </div>
 
-  </div>
+      <div class="question">
+        <h2>بماذا حلمت ورد؟</h2>
+        <div formGroupName="question3">
+          <input type="text" formControlName="dream" id="dream1">
+        </div>
+      </div>
 
-  <div class="question">
-    <h2>
-
-      بماذا حلمت ورد ؟
-    </h2>
-    <form>
-        <input type="text" id="meal1" name="meal" >
-
-
-
+      <button type="submit" id="validateBtn" (click)="onSubmit()">تحقق</button>
     </form>
 
+    <div class="end"></div>
+  </div>
+  <div id="bravoAnimation" class="bravo-animation d-none">Bravo!</div>
 </div>
-<button id="validateBtn">تحقق</button>
 
-</div>
-</div>
+

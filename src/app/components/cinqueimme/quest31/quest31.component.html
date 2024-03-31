@@ -1,24 +1,29 @@
-<!-- Première section -->
-<div class="question-container">
-    <p class="question">
-        ماذا حدث للفراشة؟
-    </p>
-    <input type="text" class="text-input">
-</div>
+<div>
+  <!-- Première section -->
+  <div class="question-container">
+      <p class="question">
+          ماذا حدث للفراشة؟
+      </p>
+      <input type="text" class="text-input" formControlName="reponse7">
+  </div>
 
-<!-- Deuxième section -->
-<div class="question-container">
-    <p class="question">
-        ماهو نوع الغذاء الذي تصنعه النحلة؟
-    </p>
-    <div class="radio-container">
-        <label class="radio-label">
-            <input type="radio" name="foodType" value="حيواني" class="radio-input">
-            حيواني
-        </label>
-        <label class="radio-label">
-            <input type="radio" name="foodType" value="نباتي" class="radio-input">
-            نباتي
-        </label>
-    </div>
+  <!-- Deuxième section -->
+  <div class="question-container">
+      <p class="question">
+          ماهو نوع الغذاء الذي تصنعه النحلة؟
+      </p>
+      <div class="radio-container">
+          <label class="radio-label">
+              <input type="radio" name="foodType" value="حيواني" class="radio-input" formControlName="reponse8" value="response8">
+              حيواني
+          </label>
+          <label class="radio-label">
+              <input type="radio" name="foodType" value="نباتي" class="radio-input" formControlName="reponse9">
+              نباتي
+          </label>
+      </div>
+  </div>
+
+  <!-- Bouton de soumission -->
+  <button class="button" type="submit" (click)="onSubmit()">تحقق</button>
 </div>

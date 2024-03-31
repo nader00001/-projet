@@ -1,7 +1,4 @@
-<!-- Première section -->
-
-
-<!-- Deuxième section -->
+<form [formGroup]="monFormulaire" (ngSubmit)="onSubmit()">
 <div class="question-container">
   <p class="question">
     ماهو الفصل الذي يتحدث عنه
@@ -9,11 +6,11 @@
   </p>
   <div class="radio-container">
       <label class="radio-label">
-          <input type="radio" name="foodType"  class="radio-input">
+          <input type="radio" name="foodType"  class="radio-input" >
           الصيف
       </label>
       <label class="radio-label">
-          <input type="radio" name="foodType"  class="radio-input">
+          <input type="radio" name="foodType"  class="radio-input" formControlName="reponse1" value="reponse1">
           الربيع
       </label>
       <label class="radio-label">
@@ -30,9 +27,17 @@
   <h1>ترتيب الأعمال</h1>
         <ol>
             <li>خرجت العرائس الطائرة ترفرف و تمرح مع السناجب</li>
+            <input type="number" name="" id="" formControlName="reponse2">
             <li>يمتص الرحيق ليصنع العسل</li>
+            <input type="number" name="" id="" formControlName="reponse3">
             <li>أقدم النحل يرعى الأزهار</li>
+            <input type="number" name="" id=""  formControlName="reponse4">
             <li>فرحت الطيور بقدوم الربيع</li>
+            <input type="number" name="" id="" formControlName="reponse5">
             <li>جاءت ترفرف حول العرائس الطائرة</li>
+            <input type="number" name="" id="" formControlName="reponse6">
         </ol>
+
+        <button type="submit">تحقق</button>
 </div>
+</form>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AceuilComponent } from './Components/aceuil/aceuil.component';
 import { ClasseComponent } from './Components/classe/classe.component';
 import { KessasComponent } from './Components/kessas/kessas.component';
@@ -58,7 +58,7 @@ import { Quest44Component } from './Components/quatriemme/9essa/quest44/quest44.
     Quest43Component,
     Quest44Component,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule , ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

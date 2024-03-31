@@ -2,7 +2,17 @@
   font-family: Arial, sans-serif;
   text-align: right; /* Aligner le texte à droite */
   background-color: #f9f9f9;
+  animation: colorChange 5s infinite alternate; /* Animation de changement de couleur */
 }
+
+@keyframes colorChange {
+  0% { background-color: #ff9999; }
+  25% { background-color: #99ccff; }
+  50% { background-color: #ffff99; }
+  75% { background-color: #99ff99; }
+  100% { background-color: #ffcc99; }
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -10,9 +20,9 @@
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    animation: fadeIn 1s ease; /* Animation d'apparition */
+  animation: fadeIn 1s ease; /* Animation d'apparition */
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -21,16 +31,20 @@
     opacity: 1;
   }
 }
+
 h1, h2 {
   color: #333;
   margin-top: 0; /* Supprimer la marge supérieure */
 }
+
 .question {
   margin-bottom: 20px;
 }
+
 form {
   margin-top: 10px;
 }
+
 button {
   display: inline-block;
   padding: 10px 20px;
@@ -41,10 +55,38 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 button:hover {
   background-color: #45a049;
 }
+
 .h1{
   text-align: center;
   color: aqua;
+}
+.end{
+  margin-top: 100%;
+}
+
+
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  70% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bravo-animation {
+  animation: bounceIn 0.75s;
 }

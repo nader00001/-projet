@@ -1,61 +1,62 @@
-<!-- Première section -->
-<div class="question-container">
-    <p class="question">
-      ماهو مصدر الهدير؟
+<div class="container">
+  <!-- Première section -->
+  <div class="question-container">
+      <p class="question">
+        ماهو مصدر الهدير؟
+      </p>
+      <input type="text" class="text-input" formControlName="sourceSound">
+  </div>
+
+  <!-- Deuxième section -->
+  <div class="question-container">
+      <p class="question">
+        ماهو مصدر الهدير؟
+      </p>
+      <div class="radio-container">
+          <label class="radio-label">
+              <input type="radio" name="source" value="الصيف" class="radio-input" formControlName="source">
+              صاروخ
+          </label>
+          <label class="radio-label">
+              <input type="radio" name="source" value="الربيع" class="radio-input" formControlName="source">
+              سيارة
+          </label>
+          <label class="radio-label">
+              <input type="radio" name="source" value="الخريف" class="radio-input" formControlName="source">
+              طائرة
+          </label>
+      </div>
+      <div class="order-list">
+        <h1>ماهي اللوازم التي سيحتاجونها الأطفال؟</h1>
+        <ul>
+            <li><input type="text" formControlName="items1"></li>
+            <li><input type="text" formControlName="items2"></li>
+            <li><input type="text" formControlName="items3"></li>
+            <li><input type="text" formControlName="items4"></li>
+            <li><input type="text" formControlName="items5"></li>
+            <li><input type="text" formControlName="items6"></li>
+            <li><input type="text" formControlName="items7"></li>
+            <li><input type="text" formControlName="items8"></li>
+        </ul>
+      </div>
+      <div class="order-list">
+        <h1>
+          ماهي المدن التي زارها الأطفال؟
+         </h1>
+        <ul>
+            <li><input type="text" formControlName="cities1"></li>
+            <li><input type="text" formControlName="cities2"></li>
+            <li><input type="text" formControlName="cities3"></li>
+            <li><input type="text" formControlName="cities4"></li>
+            <li><input type="text" formControlName="cities5"></li>
+            <li><input type="text" formControlName="cities6"></li>
+        </ul>
+      </div>
+    <p>
+      ما رأيك في هؤلاء الأطفال ؟
     </p>
-    <input type="text" class="text-input">
-</div>
+    <input type="text" formControlName="opinion">
+  </div>
 
-<!-- Deuxième section -->
-<div class="question-container">
-    <p class="question">
-      ماهو مصدر الهدير؟
-    </p>
-    <div class="radio-container">
-        <label class="radio-label">
-            <input type="radio" name="season" value="الصيف" class="radio-input">
-            صاروخ
-        </label>
-        <label class="radio-label">
-            <input type="radio" name="season" value="الربيع" class="radio-input">
-            سيارة
-        </label>
-        <label class="radio-label">
-            <input type="radio" name="season" value="الخريف" class="radio-input">
-            طائرة
-        </label>
-
-    </div>
-    <div class="order-list">
-      <h1>ماهي اللوازم التي سيحتاجونها الأطفال؟</h1>
-      <ul>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-      </ul>
-    </div>
-    <div class="order-list">
-      <h1>
-        ماهي المدن التي زارها الأطفال؟
-       </h1>
-      <ul>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-          <li>............................</li>
-
-      </ul>
-    </div>
-<p>
-  ما رأيك في هؤلاء الأطفال ؟
-</p>
-<input type="text">
-
+  <button class="button" (click)="Submit()">تحقق</button>
 </div>

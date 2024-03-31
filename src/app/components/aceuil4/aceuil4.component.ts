@@ -12,12 +12,12 @@ export class Aceuil4Component {
     this.router.navigate(['kes1']);
   }
   redirectToOtherRouterHasoub() {
-    this.router.navigate(['kes2']);
+    this.router.navigate(['kes4']);
   }
   redirectToOtherRouterSemee() {
     this.router.navigate(['kes3']);
   }
   redirectToOtherRouterRabie() {
-    this.router.navigate(['kes4']);
+    this.router.navigate(['kes2']);
   }
 }

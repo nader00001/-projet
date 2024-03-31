@@ -1,25 +1,30 @@
-<div class="container">
-  <h1>أسئلة وأجوبة</h1>
-  <div class="question">
-      <h2>لماذا خرج شكري ليصطاد في فصل الربيع؟</h2>
-      <form>
-          <input type="radio" id="reason1" name="reason" value="للحصول على طعام">
-          <label for="reason1">للحصول على طعام</label><br>
-          <input type="radio" id="reason2" name="reason" value="للاستمتاع بالطبيعة">
-          <label for="reason2">للاستمتاع بالطبيعة</label><br>
-          <input type="radio" id="reason3" name="reason" value="لممارسة هواية الصيد">
-          <label for="reason3">لممارسة هواية الصيد</label><br>
-      </form>
-  </div>
-  <div class="question">
-      <h2>ما رأيك في تصرف شكري، ولماذا؟</h2>
-      <form>
-          <input type="radio" id="opinion1" name="opinion" value="موافق عليه">
-          <label for="opinion1">موافق عليه</label><br>
-          <input type="radio" id="opinion2" name="opinion" value="غير موافق عليه">
-          <label for="opinion2">غير موافق عليه</label><br>
-          <input type="radio" id="opinion3" name="opinion" value="لا أعرف">
-          <label for="opinion3">لا أعرف</label><br>
-      </form>
+<div class="body">
+  <div class="container">
+    <h1>أسئلة وأجوبة</h1>
+    <div class="question">
+        <h2>لماذا خرج شكري ليصطاد في فصل الربيع؟</h2>
+        <form [formGroup]="questionForm1">
+            <input type="radio" id="reason1" name="reason" formControlName="reason">
+            <label for="reason1">للحصول على طعام</label><br>
+            <input type="radio" id="reason2" name="reason" formControlName="reason">
+            <label for="reason2">للاستمتاع بالطبيعة</label><br>
+            <input type="radio" id="reason3" name="reason" formControlName="reason">
+            <label for="reason3">لممارسة هواية الصيد</label><br>
+        </form>
+    </div>
+    <div class="question">
+        <h2>ما رأيك في تصرف شكري، ولماذا؟</h2>
+        <form [formGroup]="questionForm2">
+            <input type="radio" id="opinion1" name="opinion" formControlName="opinion">
+            <label for="opinion1">موافق عليه</label><br>
+            <input type="radio" id="opinion2" name="opinion" formControlName="opinion">
+            <label for="opinion2">غير موافق عليه</label><br>
+            <input type="radio" id="opinion3" name="opinion" formControlName="opinion">
+            <label for="opinion3">لا أعرف</label><br>
+            <span class="sapn">علل إجابتك</span>
+            <input type="text" formControlName="justification">
+        </form>
+    </div>
+    <button class="submit-button" (click)="submitForm()">تحقق</button>
   </div>
 </div>
