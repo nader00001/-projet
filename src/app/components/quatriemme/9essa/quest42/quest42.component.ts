@@ -31,13 +31,11 @@ export class Quest42Component implements OnInit {
 
   onSubmit() {
     if (this.questionForm.valid) {
-      console.log(this.questionForm.get('question1').value);
-      console.log(this.questionForm.get('question2.meal2').value);
       if (
         this.questionForm.get('question1.colors1').value == 'colors1' &&
         this.questionForm.get('question1.colors2').value == '' &&
         this.questionForm.get('question1.colors3').value == '' &&
-        this.questionForm.get('question2.meal2').value == "meal2" &&
+        this.questionForm.get('question2.meal2').value == 'meal2' &&
         this.questionForm.get('question2.meal1').value == '' &&
         this.questionForm.get('question2.meal3').value == ''
         // this.questionForm.get('question3.dream').value == 'فلسطين'
@@ -45,16 +43,21 @@ export class Quest42Component implements OnInit {
         alert('أحسنت');
         this.showBravoAnimation();
         this.playAudio(true);
+        // Recharger la page après 2 secondes
+        setTimeout(() => {
+          window.location.reload();
+        }, 6000);
       } else {
         alert('لم توفق');
         this.playAudio(false);
+        setTimeout(() => {
+          window.location.reload();
+        }, 6000);
       }
     } else {
       console.log('Form invalid');
     }
   }
-
-
 
   showBravoAnimation() {
     const bravoElement = document.getElementById('bravoAnimation');
@@ -66,13 +69,9 @@ export class Quest42Component implements OnInit {
     }
   }
 
-
   playAudio(correct: boolean) {
-    const audio1 = new Audio();
-    audio1.src = "/assets/vedio/ghalet.mp3";
-    const audio2 = new Audio();
-    audio2.src = "/assets/vedio/shih.mp3";
-
+    const audio1 = document.getElementById('audio1') as HTMLAudioElement;
+    const audio2 = document.getElementById('audio2') as HTMLAudioElement;
     if (correct) {
       audio2.load();
       audio2.play();
