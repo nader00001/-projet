@@ -1,40 +1,62 @@
 <div class="container">
-  <h1>أسئلة وأجوبة</h1>
+  <h1 class="h1">أسئلة وأجوبة</h1>
   <div class="question" [formGroup]="questionForm1">
-      <h2>في أي قارة تقع الهند؟</h2>
+      <h2 class="h2">في أي قارة تقع الهند؟</h2>
       <form>
           <input type="radio" id="continent1" name="continent" formControlName="continent1">
-          <label for="continent1">آسيا</label><br>
+          <label class="label" for="continent1">آسيا</label><br>
           <input type="radio" id="continent2" name="continent" formControlName="continent2">
-          <label for="continent2">أفريقيا</label><br>
+          <label class="label" for="continent2">أفريقيا</label><br>
           <input type="radio" id="continent3" name="continent" formControlName="continent3">
-          <label for="continent3">أوروبا</label><br>
+          <label class="label" for="continent3">أوروبا</label><br>
           <input type="radio" id="continent4" name="continent" formControlName="continent4">
-          <label for="continent4">أمريكا</label><br>
+          <label class="label" for="continent4">أمريكا</label><br>
       </form>
   </div>
   <div class="question" [formGroup]="questionForm2">
-      <h2>أشرح الكلمات التالية:</h2>
+      <h2 class="h2">أشرح الكلمات التالية</h2>
       <form>
-          <input type="radio" id="explain1" name="explain" formControlName="explain1">
-          <label for="explain1">أغدقت=تعني الإسراف في التبرع</label><br>
-          <input type="radio" id="explain2" name="explain" formControlName="explain2">
-          <label for="explain2">تخشى=تعني الخوف من شيء</label><br>
-          <input type="radio" id="explain3" name="explain" formControlName="explain3">
-          <label for="explain3">يراقب=تعني المراقبة بانتباه</label><br>
+          <table>
+              <tr>
+                <td><input type="text"></td>
+                  <td><label class="label" for="explain1">أغدقت</label></td>
+
+              </tr>
+              <tr>
+                <td><input type="text"></td>
+                  <td><label class="label" for="explain2">تخشى</label></td>
+
+              </tr>
+              <tr>
+                <td><input type="text"></td>
+                  <td><label class="label" for="explain3">يراقب</label></td>
+
+              </tr>
+          </table>
       </form>
   </div>
   <div class="question" [formGroup]="questionForm3">
-      <h2>أحدد شخصيات القصة وأذكر نوعها:</h2>
+      <h2 class="h2">أحدد شخصيات القصة وأذكر نوعها</h2>
       <form>
-          <input type="radio" id="characters1" name="characters" formControlName="characters1">
-          <label for="characters1">شخصيات رئيسية</label><br>
-          <input type="radio" id="characters2" name="characters" formControlName="characters2">
-          <label for="characters2">شخصيات ثانوية</label><br>
-          <input type="radio" id="characters3" name="characters" formControlName="characters3">
-          <label for="characters3">شخصيات مساعدة</label><br>
-          <input type="radio" id="characters4" name="characters" formControlName="characters4">
-          <label for="characters4">شخصيات معرقلة</label><br>
+        <table class="table table-bordered">
+          <tr>
+              <td class="col-md-6"><input type="text" id="characters1" name="characters" formControlName="characters1"></td>
+              <td class="col-md-6 text-right"><label class="label" for="characters1">شخصيات رئيسية</label></td>
+          </tr>
+          <tr>
+              <td class="col-md-6"><input type="text" id="characters2" name="characters" formControlName="characters2"></td>
+              <td class="col-md-6 text-right"><label class="label" for="characters2">شخصيات ثانوية</label></td>
+          </tr>
+          <tr>
+              <td class="col-md-6"><input type="text" id="characters3" name="characters" formControlName="characters3"></td>
+              <td class="col-md-6 text-right"><label class="label" for="characters3">شخصيات مساعدة</label></td>
+          </tr>
+          <tr>
+              <td class="col-md-6"><input type="text" id="characters4" name="characters" formControlName="characters4"></td>
+              <td class="col-md-6 text-right"><label class="label" for="characters4">شخصيات معرقلة</label></td>
+          </tr>
+      </table>
+
 
           <button type="submit" id="validateBtn" (click)="onSubmit()">تحقق</button>
       </form>
