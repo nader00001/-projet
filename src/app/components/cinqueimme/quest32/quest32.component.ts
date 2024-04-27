@@ -10,6 +10,7 @@ export class Quest32Component {
 
   questionForm: any;
   isCorrectAnswer: any;
+itsOaky: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm = this.formBuilder.group({
@@ -37,9 +38,11 @@ export class Quest32Component {
     if (this.questionForm.valid) {
       console.log('Formulaire valide. Valeurs :', this.questionForm.value);
       this.isCorrectAnswer = true;
+      this.itsOaky = true;
       // Ajoutez ici le code pour soumettre les données à votre backend ou effectuer d'autres opérations.
     } else {
       this.isCorrectAnswer = false;
+      this.itsOaky = true;
       console.error('Formulaire invalide. Veuillez remplir tous les champs requis.');
     }
   }

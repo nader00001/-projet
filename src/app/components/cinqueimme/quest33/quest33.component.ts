@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class Quest33Component {
   monFormulaire: FormGroup;
   isCorrectAnswer: any;
+  itsOaky?: boolean;
 
   constructor(private formBuilder: FormBuilder) {
     this.monFormulaire = this.formBuilder.group({
@@ -34,9 +35,11 @@ export class Quest33Component {
 
       alert('أحسنت');
       this.isCorrectAnswer = true;
+      this.itsOaky = true;
       // Vous pouvez également soumettre le formulaire ici si nécessaire
     } else {
       this.isCorrectAnswer = false;
+      this.itsOaky = true;
       console.log(this.monFormulaire.value.reponse1)
       alert('لم توفق');
     }

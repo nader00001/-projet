@@ -9,6 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class Quest34Component {
   questionForm: any;
   isCorrectAnswer: any;
+  itsOaky: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm = this.formBuilder.group({
@@ -28,9 +29,11 @@ export class Quest34Component {
         'نحتاج الحاسوب للقيام ببحث علمي أو أدبي أو ثقافي'
     ) {
       this.isCorrectAnswer = true;
+      this.itsOaky = true;
       alert('أحسنت');
       // Vous pouvez ajouter ici d'autres traitements comme l'envoi des réponses à un serveur, etc.
     } else {
+      this.itsOaky = true;
       this.isCorrectAnswer = false;
       alert('لم توفق');
     }

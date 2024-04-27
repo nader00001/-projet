@@ -10,6 +10,7 @@ export class Quest43Component {
   questionForm1: any;
   questionForm2: any;
   isCorrectAnswer: any;
+itsOkay: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm1 = this.formBuilder.group({
@@ -26,10 +27,12 @@ export class Quest43Component {
     if (this.questionForm1.value.reason="لممارسة هواية الصيد" && this.questionForm2.valid) {
       alert('أحسنت');
       this.isCorrectAnswer = true;
+    this.itsOkay = true ;
     } else {
 
       alert('لم توفق');
       this.isCorrectAnswer = true;
+      this.itsOkay= true;
     }
   }
 }

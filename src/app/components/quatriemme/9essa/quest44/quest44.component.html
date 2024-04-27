@@ -1,4 +1,8 @@
 <div class="container">
+  <div class="image-container">
+    <img *ngIf="isCorrectAnswer && itsOkay" src="assets/vrai.jpg" alt="Réponse Correcte">
+    <img *ngIf="!isCorrectAnswer && itsOkay" src="assets/faux.jpg" alt="Réponse Incorrecte">
+  </div>
   <h1 class="h1">أسئلة وأجوبة</h1>
   <div class="question" [formGroup]="questionForm1">
       <h2 class="h2">في أي قارة تقع الهند؟</h2>
@@ -63,7 +67,4 @@
   </div>
 </div>
 
-<div class="image-container">
-  <img *ngIf="isCorrectAnswer" src="assets/vrai.jpg" alt="Réponse Correcte">
-  <img *ngIf="!isCorrectAnswer" src="assets/faux.jpg" alt="Réponse Incorrecte">
-</div>
+

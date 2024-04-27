@@ -1,5 +1,10 @@
 <div class="body">
   <div class="container">
+    <div class="image-container">
+      <img *ngIf="isCorrectAnswer && itsOkay" src="assets/vrai.jpg" alt="Réponse Correcte">
+      <img *ngIf="!isCorrectAnswer && itsOkay" src="assets/faux.jpg" alt="Réponse Incorrecte">
+    </div>
+
     <h1 class="h1">أسئلة وأجوبة</h1>
 
     <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
@@ -56,7 +61,3 @@
     <p>تمت العملية بنجاح!</p>
     <div id="badge" class="badge">✓</div>
   </div>
-  <div class="image-container">
-  <img *ngIf="isCorrectAnswer" src="assets/vrai.jpg" alt="Réponse Correcte">
-  <img *ngIf="!isCorrectAnswer" src="assets/faux.jpg" alt="Réponse Incorrecte">
-</div>

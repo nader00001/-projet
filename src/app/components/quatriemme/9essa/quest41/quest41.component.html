@@ -1,4 +1,8 @@
 <div class="container">
+  <div class="image-container">
+    <img *ngIf="isCorrectAnswer && itsOkay" src="assets/vrai.jpg" alt="Réponse Correcte">
+    <img *ngIf="!isCorrectAnswer && itsOkay" src="assets/faux.jpg" alt="Réponse Incorrecte">
+  </div>
   <h1>أسئلة وأجوبة</h1>
   <div class="question" >
       <h2>لماذا فرح صابر؟</h2>
@@ -16,7 +20,4 @@
 </div>
 
 
-<div class="image-container">
-  <img *ngIf="isCorrectAnswer" src="assets/vrai.jpg" alt="Réponse Correcte">
-  <img *ngIf="!isCorrectAnswer" src="assets/faux.jpg" alt="Réponse Incorrecte">
-</div>
+

@@ -8,7 +8,8 @@ import { FormBuilder } from '@angular/forms';
 })
 export class Quest42Component implements OnInit {
   questionForm: any;
-  isCorrectAnswer: any;
+  isCorrectAnswer?: boolean;
+  itsOkay : any;
 
   constructor(private fb: FormBuilder) {}
 
@@ -45,11 +46,13 @@ export class Quest42Component implements OnInit {
             this.showBravoAnimation();
             this.playAudio(true);
             this.isCorrectAnswer = true; // Réponse correcte
+            this.itsOkay= true;
             // Recharger la page après 2 secondes
         } else {
             alert('لم توفق');
             this.playAudio(false);
             this.isCorrectAnswer = false; // Réponse incorrecte
+            this.itsOkay= true;
         }
     } else {
         console.log('Form invalid');

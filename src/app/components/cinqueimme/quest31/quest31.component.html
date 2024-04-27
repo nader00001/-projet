@@ -1,6 +1,11 @@
 <div>
   <!-- Première section -->
   <div class="question-container">
+
+    <div class="image-container">
+      <img *ngIf="isCorrectAnswer && itsOkay" src="assets/vrai.jpg" alt="Réponse Correcte">
+      <img *ngIf="!isCorrectAnswer && itsOkay" src="assets/faux.jpg" alt="Réponse Incorrecte">
+    </div>
       <p class="question">
           ماذا حدث للفراشة؟
       </p>
@@ -28,8 +33,5 @@
   <button class="button" type="submit" (click)="onSubmit()">تحقق</button>
 </div>
 
-<div class="image-container">
-  <img *ngIf="isCorrectAnswer" src="assets/vrai.jpg" alt="Réponse Correcte">
-  <img *ngIf="!isCorrectAnswer" src="assets/faux.jpg" alt="Réponse Incorrecte">
-</div>
+
 

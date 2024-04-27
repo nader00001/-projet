@@ -9,6 +9,7 @@ import { FormBuilder } from '@angular/forms';
 export class Quest31Component {
   monFormulaire: any;
   isCorrectAnswer: any;
+  itsOkay : any ;
 
   constructor(private formBuilder: FormBuilder) {
     this.monFormulaire = this.formBuilder.group({
@@ -23,8 +24,10 @@ export class Quest31Component {
     if(reponse7Value == "انغرست في جسمها شوكة أوجعتها كثيرا" && reponse8Value=="response8"){
       alert('أحسنت');
       this.isCorrectAnswer = true;
+      this.itsOkay = true ;
     }else {
       this.isCorrectAnswer = false;
+      this.itsOkay = true ;
       alert('لم توفق');
     }
 

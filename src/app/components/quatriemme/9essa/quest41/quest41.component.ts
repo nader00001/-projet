@@ -11,6 +11,7 @@ export class Quest41Component {
   questionForm2: any;
   questionForm3: any;
   isCorrectAnswer: any;
+  itsOkay?: boolean;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm1 = this.formBuilder.group({
@@ -34,9 +35,11 @@ export class Quest41Component {
       this.questionForm3.value.answer3 == 'قرر صابر أن يتحمل العطش ويدرب نفسه على الصيام.'
     ) {
       this.isCorrectAnswer = true;
+      this.itsOkay = true ;
       alert('أحسنت');
     } else {
       this.isCorrectAnswer = false;
+      this.itsOkay = true ;
       alert('لم توفق');
     }
   }
