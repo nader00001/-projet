@@ -9,6 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class Quest43Component {
   questionForm1: any;
   questionForm2: any;
+  isCorrectAnswer: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm1 = this.formBuilder.group({
@@ -24,9 +25,11 @@ export class Quest43Component {
   submitForm() {
     if (this.questionForm1.value.reason="لممارسة هواية الصيد" && this.questionForm2.valid) {
       alert('أحسنت');
+      this.isCorrectAnswer = true;
     } else {
 
       alert('لم توفق');
+      this.isCorrectAnswer = true;
     }
   }
 }

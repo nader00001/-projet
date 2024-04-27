@@ -68,6 +68,38 @@ button:hover {
   margin-top: 100%;
 }
 
+/* Styles pour le badge */
+.badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: #4CAF50; /* Couleur verte pour le succès */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  animation: badgeAnimation 0.5s ease-in-out;
+  opacity: 0; /* Le badge est initialement caché */
+}
+
+@keyframes badgeAnimation {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 
 
 @keyframes bounceIn {
@@ -89,4 +121,22 @@ button:hover {
 
 .bravo-animation {
   animation: bounceIn 0.75s;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style pour le conteneur des images */
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style pour cacher les images par défaut */
+.hidden {
+  display: none;
+}
+.fadeInOut {
+  animation: fadeInOut 2s ease-in-out; /* Définir la durée de l'animation */
 }

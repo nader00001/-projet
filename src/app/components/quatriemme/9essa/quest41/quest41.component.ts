@@ -10,6 +10,7 @@ export class Quest41Component {
   questionForm1: any;
   questionForm2: any;
   questionForm3: any;
+  isCorrectAnswer: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm1 = this.formBuilder.group({
@@ -32,8 +33,10 @@ export class Quest41Component {
       this.questionForm2.value.answer2 == 'الشهادتين الصلاة الزكاة الحج ' &&
       this.questionForm3.value.answer3 == 'قرر صابر أن يتحمل العطش ويدرب نفسه على الصيام.'
     ) {
+      this.isCorrectAnswer = true;
       alert('أحسنت');
     } else {
+      this.isCorrectAnswer = false;
       alert('لم توفق');
     }
   }

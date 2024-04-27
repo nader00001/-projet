@@ -2,15 +2,23 @@
     <h1 style="text-decoration: underline;">
         !ما أجمل الصبر
       </h1 >
+      <audio id="audioElement">
+        <source src="assets/vocal/saberAudio.mp3" type="audio/mpeg">
 
+      </audio>
+
+      <div class="audio-player-container">
+        <button class="audio-button" (click)="toggleAudio()">
+          {{ isPlaying ? 'وقف' : 'تشغيل' }}
+        </button>
+      </div>
        <div style="font-size: 18px;">
 
     <img src="assets/saber/image1.png" alt="">
     <img src="assets/saber/image2.png" alt="">
-
-   <img src="assets/saber/image3.png" alt="">
-   <img src="assets/saber/image4.png" alt="">
-   <img src="assets/saber/image5.png" alt="">
+    <img src="assets/saber/image3.png" alt="">
+    <img src="assets/saber/image4.png" alt="">
+    <img src="assets/saber/image5.png" alt="">
 
 
 

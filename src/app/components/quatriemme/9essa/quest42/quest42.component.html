@@ -48,3 +48,15 @@
   <audio id="audio1" src="assets/vedio/ghalet.mp3"></audio>
   <audio id="audio2" src="assets/vedio/shih.mp3"></audio>
 </div>
+
+
+
+
+  <div class="success-message">
+    <p>تمت العملية بنجاح!</p>
+    <div id="badge" class="badge">✓</div>
+  </div>
+  <div class="image-container">
+  <img *ngIf="isCorrectAnswer" src="assets/vrai.jpg" alt="Réponse Correcte">
+  <img *ngIf="!isCorrectAnswer" src="assets/faux.jpg" alt="Réponse Incorrecte">
+</div>

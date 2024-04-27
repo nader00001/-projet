@@ -9,6 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class Quest32Component {
 
   questionForm: any;
+  isCorrectAnswer: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm = this.formBuilder.group({
@@ -35,8 +36,10 @@ export class Quest32Component {
   Submit() {
     if (this.questionForm.valid) {
       console.log('Formulaire valide. Valeurs :', this.questionForm.value);
+      this.isCorrectAnswer = true;
       // Ajoutez ici le code pour soumettre les données à votre backend ou effectuer d'autres opérations.
     } else {
+      this.isCorrectAnswer = false;
       console.error('Formulaire invalide. Veuillez remplir tous les champs requis.');
     }
   }

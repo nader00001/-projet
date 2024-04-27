@@ -2,6 +2,16 @@
     <h1 style="text-decoration: underline;">
         الفراشة والنحلة
        </h1 >
+       <audio id="audioElement">
+        <source src="assets/vocal/farachaAudio.mp3" type="audio/mpeg">
+
+      </audio>
+
+      <div class="audio-player-container">
+        <button class="audio-button" (click)="toggleAudio()">
+          {{ isPlaying ? 'وقف' : 'تشغيل' }}
+        </button>
+      </div>
 
        <div style="font-size: 18px;">
 

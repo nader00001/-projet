@@ -10,6 +10,7 @@ export class Quest44Component {
   questionForm1: any;
   questionForm2: any;
   questionForm3: any;
+  isCorrectAnswer: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.questionForm1 = this.formBuilder.group({
@@ -29,8 +30,10 @@ export class Quest44Component {
   onSubmit() {
     if (this.questionForm1.valid && this.questionForm2.valid && this.questionForm3.valid) {
       // Vous pouvez traiter les réponses ici
+      this.isCorrectAnswer = true;
       console.log('Form submitted successfully!');
     } else {
+      this.isCorrectAnswer = false;
       console.error('Veuillez remplir tous les champs obligatoires.');
     }
   }

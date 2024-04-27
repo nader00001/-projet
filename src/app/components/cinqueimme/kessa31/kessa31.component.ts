@@ -7,7 +7,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./kessa31.component.css']
 })
 export class Kessa31Component {
-  constructor(private router : Router){}
+  audioElement: HTMLAudioElement;
+  isPlaying: boolean;
+
+  constructor(private router: Router) {
+    this.audioElement = new Audio('assets/vocal/farachaAudio.mp3');
+    this.isPlaying = false;
+  }
+
+  toggleAudio() {
+    if (this.isPlaying) {
+      this.audioElement.pause();
+    } else {
+      this.audioElement.play();
+    }
+    this.isPlaying = !this.isPlaying;
+  }
   routerFarcha(){
     this.router.navigate(['/quest31']);
   }

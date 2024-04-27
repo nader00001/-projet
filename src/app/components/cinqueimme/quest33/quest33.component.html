@@ -41,3 +41,7 @@
         <button type="submit">تحقق</button>
 </div>
 </form>
+<div class="image-container">
+  <img *ngIf="isCorrectAnswer" src="assets/vrai.jpg" alt="Réponse Correcte">
+  <img *ngIf="!isCorrectAnswer" src="assets/faux.jpg" alt="Réponse Incorrecte">
+</div>

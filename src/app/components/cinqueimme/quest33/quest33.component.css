@@ -102,4 +102,22 @@ ol li {
   font-size: 16px;
   margin-bottom: 10px;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style pour le conteneur des images */
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style pour cacher les images par défaut */
+.hidden {
+  display: none;
+}
+.fadeInOut {
+  animation: fadeInOut 2s ease-in-out; /* Définir la durée de l'animation */
+}
 

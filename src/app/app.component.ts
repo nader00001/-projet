@@ -7,6 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+
+  audioElement: HTMLAudioElement;
+  isPlaying: boolean;
+
   ToAceuil4() {
     this.router.navigate(['/aceuil4']);
   }
@@ -15,8 +19,20 @@ export class AppComponent {
     this.router.navigate(['/aceuil3']);
   }
 
+
+  toggleAudio() {
+    if (this.isPlaying) {
+      this.audioElement.pause();
+    } else {
+      this.audioElement.play();
+    }
+    this.isPlaying = !this.isPlaying;
+  }
   showVideoBackground: boolean = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.audioElement = new Audio('assets/vocal/Audio page de garde.mp3');
+    this.isPlaying = false;
+  }
   title = 'pfeIslemOns';
 
   Aceuil4() {

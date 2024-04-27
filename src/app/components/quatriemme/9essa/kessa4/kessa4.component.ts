@@ -7,7 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./kessa4.component.css']
 })
 export class Kessa4Component {
- constructor(private router : Router){}
+  audioElement: HTMLAudioElement;
+  isPlaying: boolean;
+  constructor(private router : Router){
+    this.audioElement = new Audio('assets/vocal/mawkliAudio.mp3');
+    this.isPlaying = false;
+  }
+  toggleAudio() {
+    if (this.isPlaying) {
+      this.audioElement.pause();
+    } else {
+      this.audioElement.play();
+    }
+    this.isPlaying = !this.isPlaying;
+  }
 router2() {
   this.router.navigate(['./quest44']);
 }

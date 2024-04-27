@@ -8,6 +8,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class Quest42Component implements OnInit {
   questionForm: any;
+  isCorrectAnswer: any;
 
   constructor(private fb: FormBuilder) {}
 
@@ -31,33 +32,30 @@ export class Quest42Component implements OnInit {
 
   onSubmit() {
     if (this.questionForm.valid) {
-      if (
-        this.questionForm.get('question1.colors1').value == 'colors1' &&
-        this.questionForm.get('question1.colors2').value == '' &&
-        this.questionForm.get('question1.colors3').value == '' &&
-        this.questionForm.get('question2.meal2').value == 'meal2' &&
-        this.questionForm.get('question2.meal1').value == '' &&
-        this.questionForm.get('question2.meal3').value == ''
-        // this.questionForm.get('question3.dream').value == 'فلسطين'
-      ) {
-        alert('أحسنت');
-        this.showBravoAnimation();
-        this.playAudio(true);
-        // Recharger la page après 2 secondes
-        setTimeout(() => {
-          window.location.reload();
-        }, 6000);
-      } else {
-        alert('لم توفق');
-        this.playAudio(false);
-        setTimeout(() => {
-          window.location.reload();
-        }, 6000);
-      }
+        if (
+            this.questionForm.get('question1.colors1').value == 'colors1' &&
+            this.questionForm.get('question1.colors2').value == '' &&
+            this.questionForm.get('question1.colors3').value == '' &&
+            this.questionForm.get('question2.meal2').value == 'meal2' &&
+            this.questionForm.get('question2.meal1').value == '' &&
+            this.questionForm.get('question2.meal3').value == ''
+            // this.questionForm.get('question3.dream').value == 'فلسطين'
+        ) {
+            alert('أحسنت');
+            this.showBravoAnimation();
+            this.playAudio(true);
+            this.isCorrectAnswer = true; // Réponse correcte
+            // Recharger la page après 2 secondes
+        } else {
+            alert('لم توفق');
+            this.playAudio(false);
+            this.isCorrectAnswer = false; // Réponse incorrecte
+        }
     } else {
-      console.log('Form invalid');
+        console.log('Form invalid');
     }
-  }
+}
+
 
   showBravoAnimation() {
     const bravoElement = document.getElementById('bravoAnimation');
