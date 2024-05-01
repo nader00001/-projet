@@ -4,13 +4,13 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-kessa3',
   templateUrl: './kessa3.component.html',
-  styleUrls: ['./kessa3.component.css']
+  styleUrls: ['./kessa3.component.css'],
 })
 export class Kessa3Component {
   audioElement: HTMLAudioElement;
   isPlaying: boolean;
-  constructor(private router : Router){
-    this.audioElement = new Audio('assets/vocal/saberAudio.mp3');
+  constructor(private router: Router) {
+    this.audioElement = new Audio('assets/vocal/saberAudioUpdate.mp3');
     this.isPlaying = false;
   }
   toggleAudio() {
@@ -21,9 +21,7 @@ export class Kessa3Component {
     }
     this.isPlaying = !this.isPlaying;
   }
-routerSaber() {
-  this.router.navigate(['/quest41'])
-}
-
-
+  routerSaber() {
+    this.router.navigate(['/quest41']);
+  }
 }

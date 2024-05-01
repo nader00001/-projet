@@ -1,68 +1,47 @@
 /* Style pour le titre */
 h1 {
-    color: #ff69b4; /* Rose vif */
-    font-family: Arial, sans-serif;
-    text-align: center;
-    font-size: 50px;
-}
-
-/* Style pour les images */
-img {
-
-    display: block; /* Pour éviter les espaces vides sous les images */
-    margin: 0 auto; /* Centrer les images horizontalement */
-    width: 300px;
-    height: 300px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 /* Style pour le texte */
 p {
-    color: #0000ff; /* Bleu */
-    font-family: Arial, sans-serif;
-    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-    text-align: justify;
-    text-align: right;
-    direction: rtl;
-    margin-right: 100px;
-    font-size: 30px;
+  font-size: 18px;
+  text-align: right;
 }
 
+/* Style pour les images */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style pour le bouton */
 .submit {
-  background-color: #4c5baf; /* Couleur de fond */
-  color: white; /* Couleur du texte */
-  padding: 10px 20px; /* Espacement intérieur */
-  border: none; /* Suppression de la bordure */
-  border-radius: 5px; /* Arrondi des coins */
-  cursor: pointer; /* Curseur de la souris */
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.submit:hover {
-  background-color: #5645a0; /* Couleur de fond au survol */
-}
-
+/* Style pour le lecteur audio */
 .audio-player-container {
-  position: fixed;
-
-  transform: translateX(-50%);
-
+  text-align: right;
+  margin-right: 20px;
 }
 
 .audio-button {
-  background-color: #4CAF50; /* Couleur de fond du bouton */
+  display: block;
+  margin: 10px auto;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  color: white; /* Couleur du texte du bouton */
-  margin-left: 40%;
-  width: 100px;
-  height: 50px;
-  text-decoration: none;
-
-  font-size: 16px;
-  margin-bottom: 10px;
+  border-radius: 5px;
   cursor: pointer;
-
-}
-
-
-.submit:hover {
-  background-color: #454ba0; /* Couleur de fond au survol */
 }

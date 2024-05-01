@@ -31,8 +31,7 @@ export class Quest34Component {
       this.isCorrectAnswer = true;
       this.itsOaky = true;
       alert('أحسنت');
-      // Vous pouvez ajouter ici d'autres traitements comme l'envoi des réponses à un serveur, etc.
-    } else {
+      } else {
       this.itsOaky = true;
       this.isCorrectAnswer = false;
       alert('لم توفق');
